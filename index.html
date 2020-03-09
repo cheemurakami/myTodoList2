@@ -4,17 +4,38 @@
         <meta charset="utf-8">
         <title>BのTodo List</title>
         <link rel='stylesheet' href='css/styles.css'>
+        <script src="https://kit.fontawesome.com/84e0b02a1c.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <h1>BくんのTodo List</h1>
         <div id='regular-list'>
-           <div class='input-list'> <input type="checkbox" id='はみがき'> はみがき</div>
-           <div class='input-list'> <input type="checkbox" id='oatmeal'> oat mealを食べる</div>
-           <div class='input-list'> <input type="checkbox" id='仕事'> 仕事をする</div>
-           <div class='input-list'> <input type="checkbox" id='キウイごはん'> キウイにごはんをあげる</div>
-           <div class='input-list'> <input type="checkbox" id='キウイと遊ぶ'> キウイと遊ぶ</div>
+           <div class='input-list'> 
+               <input type="checkbox" class='checkbox'><span class='task'>はみがき</span>
+           </div>
+           <div class='input-list'> 
+               <input type="checkbox" class='checkbox'><span class='task'>oat mealを食べる</span>
+           </div>
+           <div class='input-list'> 
+               <input type="checkbox" class='checkbox'><span class='task'>仕事をする</span>
+           </div>
+           <div class='input-list'> 
+               <input type="checkbox" class='checkbox'><span class='task'>キウイにごはんをあげる</span>
+           </div>
+           <div class='input-list'> 
+               <input type="checkbox" class='checkbox'><span class='task'>キウイと遊ぶ</span>
+           </div>
         </div>
-           
+          
+        <h2>Bくんの新しいTodo List</h2>
+        <form id='form'>
+            Add New List: <input type='text' id='new-task-input' placeholder="type here waaa">
+            <button type='submit'>Submit</button>
+        </form>
+
+        <div id='new-list'>
+
+        </div>
+
 
         <script src='js/main.js'>
         </script>
