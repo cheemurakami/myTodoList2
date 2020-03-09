@@ -5,16 +5,18 @@ const inputCheckBox = document.querySelector('checkbox');
 const newListOya = document.getElementById('new-list');
 const gomiIcon = document.querySelector('fas fa-dumpster-fire');
 
-    checkBoxArray.forEach((checkbox) => {
-        checkbox.addEventListener('click', () => {
-            // checkbox.nextSibling.style.textDecoration = "line-through"//checkboxと同じ階層にあるnextSibling
-            if (checkbox.checked == true){
-                checkbox.nextSibling.style.textDecoration = "line-through"
-            } else {
-                checkbox.nextSibling.style.textDecoration = ""
-            }
-        })    
+const checkBoxClicker = (checkbox) => { //checkboxは仮
+    checkbox.addEventListener('click', () => {
+        if (checkbox.checked == true){
+            checkbox.nextSibling.style.textDecoration = "line-through"
+        } else {
+            checkbox.nextSibling.style.textDecoration = ""
+        }
     });
+}
+checkBoxArray.forEach((checkbox) => { //checkboxは仮
+    checkBoxClicker(checkbox);
+});
 
 const addedList = document.getElementById('new-task-input');
 
@@ -45,13 +47,7 @@ formElement.addEventListener('submit', (event) => {
         newListOya.removeChild(gomiIconElement); 
     })
     
-    newInput.addEventListener('click',() => {
-        if (newInput.nextSibling.style.textDecoration !== "line-through"){
-            newInput.nextSibling.style.textDecoration = "line-through"
-        } else {
-            newInput.nextSibling.style.textDecoration = ""
-        }
-    });
+    checkBoxClicker(newInput);
 }
 
     })
